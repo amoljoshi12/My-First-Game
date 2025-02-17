@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpdbe5ao4hhtd"]
+
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_nfc5s"]
+[ext_resource type="Texture2D" uid="uid://dprpnv7n3tm6i" path="res://assets/sprites/door_closed.png" id="1_ynb3n"]
+
+[node name="door" type="Area2D"]
+script = ExtResource("1_nfc5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ynb3n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
